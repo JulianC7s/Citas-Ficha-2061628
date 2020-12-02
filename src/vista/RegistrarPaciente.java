@@ -27,136 +27,143 @@ public class RegistrarPaciente extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        TxtIdentificacion = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        TxtNombre = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        TxtApellido = new javax.swing.JTextField();
+        identificacion = new javax.swing.JLabel();
+        txt_identificacion = new javax.swing.JTextField();
+        nombres = new javax.swing.JLabel();
+        txt_nombres = new javax.swing.JTextField();
+        apellidos = new javax.swing.JLabel();
+        txt_apellidos = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        Rmasculino = new javax.swing.JRadioButton();
-        RFemenino = new javax.swing.JRadioButton();
-        Bregistrar = new javax.swing.JButton();
-        Bnuevo = new javax.swing.JButton();
-        Datenacimiento = new com.toedter.calendar.JDateChooser();
+        genero = new javax.swing.JLabel();
+        rdb_masculino = new javax.swing.JRadioButton();
+        rdb_femenino = new javax.swing.JRadioButton();
+        btn_registrar = new javax.swing.JButton();
+        btn_nuevo = new javax.swing.JButton();
+        Dta_Fecha_Nacimiento = new com.toedter.calendar.JDateChooser();
 
         setClosable(true);
         setMaximizable(true);
         setResizable(true);
         setTitle("Registrar Pacientes");
 
-        jLabel1.setText("Identificacion");
+        identificacion.setText("Identificacion");
 
-        jLabel2.setText("Nombre");
-
-        jLabel3.setText("Apellido");
-
-        jLabel4.setText("Fecha De Nacimiento");
-
-        jLabel5.setText("Genero");
-
-        Rmasculino.setText("Masculino");
-
-        RFemenino.setText("Femenino");
-
-        Bregistrar.setText("Registrar");
-        Bregistrar.addActionListener(new java.awt.event.ActionListener() {
+        txt_identificacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BregistrarActionPerformed(evt);
+                txt_identificacionActionPerformed(evt);
             }
         });
 
-        Bnuevo.setText("Nuevo");
+        nombres.setText("Nombre");
+
+        apellidos.setText("Apellidos");
+
+        jLabel4.setText("Fecha De Nacimiento");
+
+        genero.setText("Genero");
+
+        rdb_masculino.setText("Masculino");
+
+        rdb_femenino.setText("Femenino");
+
+        btn_registrar.setText("Registrar");
+        btn_registrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_registrarActionPerformed(evt);
+            }
+        });
+
+        btn_nuevo.setText("Nuevo");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel3))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(TxtIdentificacion)
-                                    .addComponent(TxtNombre)
-                                    .addComponent(TxtApellido, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addGap(18, 18, 18)
-                                .addComponent(Datenacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addGap(29, 29, 29)
-                                .addComponent(Rmasculino)
-                                .addGap(18, 18, 18)
-                                .addComponent(RFemenino))))
+                            .addComponent(identificacion)
+                            .addComponent(nombres)
+                            .addComponent(apellidos))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txt_identificacion)
+                            .addComponent(txt_nombres)
+                            .addComponent(txt_apellidos, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(91, 91, 91)
-                        .addComponent(Bregistrar)
+                        .addComponent(jLabel4)
+                        .addGap(18, 18, 18)
+                        .addComponent(Dta_Fecha_Nacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(genero)
                         .addGap(29, 29, 29)
-                        .addComponent(Bnuevo)))
-                .addContainerGap(134, Short.MAX_VALUE))
+                        .addComponent(rdb_masculino)
+                        .addGap(18, 18, 18)
+                        .addComponent(rdb_femenino))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btn_registrar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btn_nuevo)))
+                .addContainerGap(160, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(TxtIdentificacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(identificacion)
+                    .addComponent(txt_identificacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(TxtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nombres)
+                    .addComponent(txt_nombres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(TxtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(apellidos)
+                    .addComponent(txt_apellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(14, 14, 14)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel4)
-                    .addComponent(Datenacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Dta_Fecha_Nacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(Rmasculino)
-                    .addComponent(RFemenino))
-                .addGap(34, 34, 34)
+                    .addComponent(genero)
+                    .addComponent(rdb_masculino)
+                    .addComponent(rdb_femenino))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Bregistrar)
-                    .addComponent(Bnuevo))
-                .addContainerGap(34, Short.MAX_VALUE))
+                    .addComponent(btn_registrar)
+                    .addComponent(btn_nuevo))
+                .addGap(34, 34, 34))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BregistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BregistrarActionPerformed
+    private void btn_registrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_registrarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BregistrarActionPerformed
+    }//GEN-LAST:event_btn_registrarActionPerformed
+
+    private void txt_identificacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_identificacionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_identificacionActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Bnuevo;
-    private javax.swing.JButton Bregistrar;
-    private com.toedter.calendar.JDateChooser Datenacimiento;
-    private javax.swing.JRadioButton RFemenino;
-    private javax.swing.JRadioButton Rmasculino;
-    private javax.swing.JTextField TxtApellido;
-    private javax.swing.JTextField TxtIdentificacion;
-    private javax.swing.JTextField TxtNombre;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    public com.toedter.calendar.JDateChooser Dta_Fecha_Nacimiento;
+    private javax.swing.JLabel apellidos;
+    public javax.swing.JButton btn_nuevo;
+    public javax.swing.JButton btn_registrar;
+    private javax.swing.JLabel genero;
+    private javax.swing.JLabel identificacion;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel nombres;
+    public javax.swing.JRadioButton rdb_femenino;
+    public javax.swing.JRadioButton rdb_masculino;
+    public javax.swing.JTextField txt_apellidos;
+    public javax.swing.JTextField txt_identificacion;
+    public javax.swing.JTextField txt_nombres;
     // End of variables declaration//GEN-END:variables
 }
