@@ -101,6 +101,10 @@ public class GestorPaciente
 
  return resultado; 
 }
+
+    public LinkedList<Paciente> getPacientebyParametro(int parametro, String valor) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 } 
  
 

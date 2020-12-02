@@ -9,12 +9,12 @@ package vista;
  *
  * @author Julian Carrillo
  */
-public class ConsultarMedico extends javax.swing.JInternalFrame {
+public class ConsultarConsultorio extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form ConsultarMedico
+     * Creates new form ConsultarConsultorio
      */
-    public ConsultarMedico() {
+    public ConsultarConsultorio() {
         initComponents();
     }
 
@@ -28,30 +28,24 @@ public class ConsultarMedico extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        txt_identmed = new javax.swing.JRadioButton();
-        nombremed = new javax.swing.JRadioButton();
-        apellidosmed = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
-        Txtbusdoctor = new javax.swing.JTextField();
-        Bconsultarmed = new javax.swing.JButton();
+        txt_valorconsultorio = new javax.swing.JTextField();
+        Bconsultarconsul = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        Tmedicos = new javax.swing.JTable();
+        tbl_datosconsul = new javax.swing.JTable();
+        rdb_consultorio = new javax.swing.JRadioButton();
+        rdb_nombreconsultorio = new javax.swing.JRadioButton();
 
         setClosable(true);
         setMaximizable(true);
         setResizable(true);
+        setTitle("Consultar Consultorio");
 
-        txt_identmed.setText("Identificacion");
+        jLabel1.setText("Valor a buscar");
 
-        nombremed.setText("Nombres");
+        Bconsultarconsul.setText("Aceptar");
 
-        apellidosmed.setText("Apellidos");
-
-        jLabel1.setText("Valor a Buscar");
-
-        Bconsultarmed.setText("Consultar");
-
-        Tmedicos.setModel(new javax.swing.table.DefaultTableModel(
+        tbl_datosconsul.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -59,10 +53,27 @@ public class ConsultarMedico extends javax.swing.JInternalFrame {
                 {null, null, null}
             },
             new String [] {
-                "identificacion", "Nombre", "Apellido"
+                "Consultorio #", "Tipo Consultorio", "Piso De Consultorio"
             }
-        ));
-        jScrollPane1.setViewportView(Tmedicos);
+        ) {
+            boolean[] canEdit = new boolean [] {
+                true, true, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tbl_datosconsul);
+
+        rdb_consultorio.setText("Consultorio Numero");
+        rdb_consultorio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rdb_consultorioActionPerformed(evt);
+            }
+        });
+
+        rdb_nombreconsultorio.setText("Consultorio Nombre");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -72,36 +83,36 @@ public class ConsultarMedico extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(txt_identmed)
-                        .addGap(18, 18, 18)
-                        .addComponent(nombremed)
-                        .addGap(18, 18, 18)
-                        .addComponent(apellidosmed))
+                        .addComponent(rdb_consultorio)
+                        .addGap(27, 27, 27)
+                        .addComponent(rdb_nombreconsultorio))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addGap(30, 30, 30)
-                        .addComponent(Txtbusdoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(57, 57, 57)
-                        .addComponent(Bconsultarmed))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(txt_valorconsultorio, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Bconsultarconsul)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_identmed)
-                    .addComponent(nombremed)
-                    .addComponent(apellidosmed))
-                .addGap(29, 29, 29)
+                    .addComponent(rdb_consultorio)
+                    .addComponent(rdb_nombreconsultorio))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(Txtbusdoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Bconsultarmed))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(txt_valorconsultorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Bconsultarconsul))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -118,16 +129,19 @@ public class ConsultarMedico extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void rdb_consultorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdb_consultorioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rdb_consultorioActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Bconsultarmed;
-    public javax.swing.JTable Tmedicos;
-    public javax.swing.JTextField Txtbusdoctor;
-    public javax.swing.JRadioButton apellidosmed;
+    private javax.swing.JButton Bconsultarconsul;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JRadioButton nombremed;
-    public javax.swing.JRadioButton txt_identmed;
+    public javax.swing.JRadioButton rdb_consultorio;
+    public javax.swing.JRadioButton rdb_nombreconsultorio;
+    public javax.swing.JTable tbl_datosconsul;
+    public javax.swing.JTextField txt_valorconsultorio;
     // End of variables declaration//GEN-END:variables
 }

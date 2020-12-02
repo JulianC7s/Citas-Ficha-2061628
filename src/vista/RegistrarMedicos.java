@@ -28,24 +28,24 @@ public class RegistrarMedicos extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        identificacionMed = new javax.swing.JLabel();
+        nombreMed = new javax.swing.JLabel();
+        apellidomedi = new javax.swing.JLabel();
         Txtidentificacionmed = new javax.swing.JTextField();
         Txtnombremed = new javax.swing.JTextField();
         Txtapellidomed = new javax.swing.JTextField();
         Registrarmed = new javax.swing.JButton();
-        Nuevomed = new javax.swing.JButton();
+        btn_nuevomed = new javax.swing.JButton();
 
         setTitle("REGISTRAR MEDICOS");
 
         jPanel1.setName(""); // NOI18N
 
-        jLabel1.setText("Identificacion");
+        identificacionMed.setText("Identificacion");
 
-        jLabel2.setText("Nombre");
+        nombreMed.setText("Nombre");
 
-        jLabel3.setText("Apellido");
+        apellidomedi.setText("Apellido");
 
         Registrarmed.setText("Registrar");
         Registrarmed.addActionListener(new java.awt.event.ActionListener() {
@@ -54,7 +54,7 @@ public class RegistrarMedicos extends javax.swing.JInternalFrame {
             }
         });
 
-        Nuevomed.setText("Nuevo");
+        btn_nuevomed.setText("Nuevo");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -65,9 +65,9 @@ public class RegistrarMedicos extends javax.swing.JInternalFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3))
+                            .addComponent(identificacionMed)
+                            .addComponent(nombreMed)
+                            .addComponent(apellidomedi))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(Txtidentificacionmed)
@@ -77,7 +77,7 @@ public class RegistrarMedicos extends javax.swing.JInternalFrame {
                         .addGap(57, 57, 57)
                         .addComponent(Registrarmed)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                        .addComponent(Nuevomed)))
+                        .addComponent(btn_nuevomed)))
                 .addContainerGap(155, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -85,20 +85,20 @@ public class RegistrarMedicos extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
+                    .addComponent(identificacionMed)
                     .addComponent(Txtidentificacionmed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                    .addComponent(nombreMed)
                     .addComponent(Txtnombremed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
+                    .addComponent(apellidomedi)
                     .addComponent(Txtapellidomed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Registrarmed)
-                    .addComponent(Nuevomed))
+                    .addComponent(btn_nuevomed))
                 .addGap(55, 55, 55))
         );
 
@@ -122,14 +122,14 @@ public class RegistrarMedicos extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Nuevomed;
-    private javax.swing.JButton Registrarmed;
-    private javax.swing.JTextField Txtapellidomed;
-    private javax.swing.JTextField Txtidentificacionmed;
-    private javax.swing.JTextField Txtnombremed;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    public javax.swing.JButton Registrarmed;
+    public javax.swing.JTextField Txtapellidomed;
+    public javax.swing.JTextField Txtidentificacionmed;
+    public javax.swing.JTextField Txtnombremed;
+    private javax.swing.JLabel apellidomedi;
+    private javax.swing.JButton btn_nuevomed;
+    private javax.swing.JLabel identificacionMed;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel nombreMed;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,6 +1,8 @@
 
 package modelo;
 
+import java.sql.Statement;
+
 
 public class Consultorio 
 {
@@ -24,5 +26,25 @@ public class Consultorio
     }
     public void setNombreconsul(String nombreconsul){
         this.nombreconsul = nombreconsul;
+    }
+
+    String getConsultorioN() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    String getConsultorioNom() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    Statement createStatement() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String getconsultorioN() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String getconsultorioNom() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 } 

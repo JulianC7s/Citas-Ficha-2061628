@@ -44,18 +44,18 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="RIdentificacion" min="-2" max="-2" attributes="0"/>
+                          <Component id="rdb_identificacion" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="Rnombre" min="-2" max="-2" attributes="0"/>
+                          <Component id="rdb_nombres" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="Rapellidos" min="-2" max="-2" attributes="0"/>
+                          <Component id="rdb_apellidos" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="Rsexo" min="-2" max="-2" attributes="0"/>
+                          <Component id="rdb_genero" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="Txtbuscar" min="-2" pref="143" max="-2" attributes="0"/>
+                          <Component id="txt_valor" min="-2" pref="143" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="Bconsultar" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -74,15 +74,15 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="RIdentificacion" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Rnombre" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Rapellidos" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Rsexo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdb_identificacion" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdb_nombres" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdb_apellidos" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="rdb_genero" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Txtbuscar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_valor" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Bconsultar" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -93,32 +93,47 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JRadioButton" name="RIdentificacion">
+        <Component class="javax.swing.JRadioButton" name="rdb_identificacion">
           <Properties>
             <Property name="text" type="java.lang.String" value="identificacion"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="Rnombre">
+        <Component class="javax.swing.JRadioButton" name="rdb_nombres">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nombre"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="Rapellidos">
+        <Component class="javax.swing.JRadioButton" name="rdb_apellidos">
           <Properties>
             <Property name="text" type="java.lang.String" value="Apellidos"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="Rsexo">
+        <Component class="javax.swing.JRadioButton" name="rdb_genero">
           <Properties>
             <Property name="text" type="java.lang.String" value="Sexo"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Valor a buscar"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="Txtbuscar">
+        <Component class="javax.swing.JTextField" name="txt_valor">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="Bconsultar">
           <Properties>
@@ -132,17 +147,20 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="TabPacientes">
+            <Component class="javax.swing.JTable" name="tbl_datos">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                   <Table columnCount="4" rowCount="4">
-                    <Column editable="true" title="Title 1" type="java.lang.Object"/>
-                    <Column editable="true" title="Title 2" type="java.lang.Object"/>
-                    <Column editable="true" title="Title 3" type="java.lang.Object"/>
-                    <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                    <Column editable="true" title="Identificacion" type="java.lang.Object"/>
+                    <Column editable="true" title="Nombres" type="java.lang.Object"/>
+                    <Column editable="false" title="Apellidos" type="java.lang.Object"/>
+                    <Column editable="true" title="Genero" type="java.lang.Object"/>
                   </Table>
                 </Property>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>

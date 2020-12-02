@@ -28,34 +28,34 @@ public class ConsultarPaciente extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        RIdentificacion = new javax.swing.JRadioButton();
-        Rnombre = new javax.swing.JRadioButton();
-        Rapellidos = new javax.swing.JRadioButton();
-        Rsexo = new javax.swing.JRadioButton();
+        rdb_identificacion = new javax.swing.JRadioButton();
+        rdb_nombres = new javax.swing.JRadioButton();
+        rdb_apellidos = new javax.swing.JRadioButton();
+        rdb_genero = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
-        Txtbuscar = new javax.swing.JTextField();
+        txt_valor = new javax.swing.JTextField();
         Bconsultar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        TabPacientes = new javax.swing.JTable();
+        tbl_datos = new javax.swing.JTable();
 
         setClosable(true);
         setMaximizable(true);
         setResizable(true);
         setTitle("Consultar Pacientes");
 
-        RIdentificacion.setText("identificacion");
+        rdb_identificacion.setText("identificacion");
 
-        Rnombre.setText("Nombre");
+        rdb_nombres.setText("Nombre");
 
-        Rapellidos.setText("Apellidos");
+        rdb_apellidos.setText("Apellidos");
 
-        Rsexo.setText("Sexo");
+        rdb_genero.setText("Sexo");
 
         jLabel1.setText("Valor a buscar");
 
         Bconsultar.setText("Aceptar");
 
-        TabPacientes.setModel(new javax.swing.table.DefaultTableModel(
+        tbl_datos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -63,10 +63,18 @@ public class ConsultarPaciente extends javax.swing.JInternalFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Identificacion", "Nombres", "Apellidos", "Genero"
             }
-        ));
-        jScrollPane1.setViewportView(TabPacientes);
+        ) {
+            boolean[] canEdit = new boolean [] {
+                true, true, false, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tbl_datos);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -76,17 +84,17 @@ public class ConsultarPaciente extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(RIdentificacion)
+                        .addComponent(rdb_identificacion)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Rnombre)
+                        .addComponent(rdb_nombres)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Rapellidos)
+                        .addComponent(rdb_apellidos)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Rsexo))
+                        .addComponent(rdb_genero))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
-                        .addComponent(Txtbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_valor, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(Bconsultar)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -100,14 +108,14 @@ public class ConsultarPaciente extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(RIdentificacion)
-                    .addComponent(Rnombre)
-                    .addComponent(Rapellidos)
-                    .addComponent(Rsexo))
+                    .addComponent(rdb_identificacion)
+                    .addComponent(rdb_nombres)
+                    .addComponent(rdb_apellidos)
+                    .addComponent(rdb_genero))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(Txtbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_valor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Bconsultar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -131,14 +139,14 @@ public class ConsultarPaciente extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Bconsultar;
-    private javax.swing.JRadioButton RIdentificacion;
-    private javax.swing.JRadioButton Rapellidos;
-    private javax.swing.JRadioButton Rnombre;
-    private javax.swing.JRadioButton Rsexo;
-    private javax.swing.JTable TabPacientes;
-    private javax.swing.JTextField Txtbuscar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JRadioButton rdb_apellidos;
+    public javax.swing.JRadioButton rdb_genero;
+    public javax.swing.JRadioButton rdb_identificacion;
+    public javax.swing.JRadioButton rdb_nombres;
+    public javax.swing.JTable tbl_datos;
+    public javax.swing.JTextField txt_valor;
     // End of variables declaration//GEN-END:variables
 }
